@@ -75,4 +75,44 @@ class TestToyRobot < Minitest::Test
     end
   end
 
+  def test_move_test_case_a
+    # PLACE 0, 0, NORTH
+    @robot.place 0, 0, :north
+    # MOVE
+    @robot.move
+    # REPORT
+    # Output: 0, 1, NORTH
+    assert_equal 0, @robot.position.x
+    assert_equal 1, @robot.position.y
+    assert_equal :north, @robot.facing
+  end
+
+  def test_move_test_case_b
+    # PLACE 0, 0, NORTH
+    @robot.place 0, 0, :north
+    # LEFT
+    @robot.turn :left
+    # REPORT
+    # Output: 0, 0, WEST
+    assert_equal 0, @robot.position.x
+    assert_equal 0, @robot.position.y
+    assert_equal :west, @robot.facing
+
+    # PLACE 1, 2, EAST
+    @robot.place 1, 2, :east
+    # MOVE
+    @robot.move
+    # MOVE
+    @robot.move
+    # LEFT
+    @robot.turn :left
+    # MOVE
+    @robot.move
+    # REPORT
+    # Output: 3, 3, NORTH
+    assert_equal 3, @robot.position.x
+    assert_equal 3, @robot.position.y
+    assert_equal :north, @robot.facing
+  end
+
 end
