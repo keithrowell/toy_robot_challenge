@@ -20,6 +20,23 @@ module ToyRobot
     end
 
     def move
+      current_x, current_y = @game_board.position.x, @game_board.position.y
+      case facing
+      when :north
+        @game_board.place current_x, current_y + 1
+      when :east
+        @game_board.place current_x + 1, current_y
+      when :south
+        @game_board.place current_x, current_y - 1
+      when :west
+        @game_board.place current_x - 1, current_y
+      end
+      new_x, new_y = @game_board.position.x, @game_board.position.y
+      if current_x == new_x && current_y == new_y
+        return nil
+      else
+        return @game_board.position
+      end
     end
 
     def turn direction
