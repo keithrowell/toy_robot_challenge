@@ -35,17 +35,17 @@ class TestGameBoard < Minitest::Test
   def test_facing
     assert_equal :north, @board.facing
 
-    @board.facing = :south
+    @board.face :south
     assert_equal :south, @board.facing
 
-    @board.facing = :east
+    @board.face :east
     assert_equal :east, @board.facing
 
-    @board.facing = :west
+    @board.face :west
     assert_equal :west, @board.facing
 
     assert_raises ToyRobot::GameBoard::InvalidFacing do
-      @board.facing = :invalid
+      @board.face :invalid
     end
   end
 end
