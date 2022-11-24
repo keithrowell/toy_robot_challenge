@@ -48,6 +48,14 @@ class TestToyRobot < Minitest::Test
     assert_equal :north, @robot.facing
   end
 
+  def test_turn_does_not_affect_position
+    @robot.place 2, 3, :north
+    @robot.turn :left
+    assert_equal 2, @robot.position.x
+    assert_equal 3, @robot.position.y
+    assert_equal :west, @robot.facing
+  end
+
   def test_invalid_turn_direction
     assert_raises ToyRobot::Robot::InvalidDirection do
       @robot.turn :invalid
