@@ -115,4 +115,35 @@ class TestToyRobot < Minitest::Test
     assert_equal :north, @robot.facing
   end
 
+  def test_attempt_to_move_beyond_edge
+    @robot.place 4, 4, :north
+    @robot.move
+    assert_equal 4, @robot.position.x
+    assert_equal 4, @robot.position.y
+    assert_equal :north, @robot.facing
+
+    @robot.place 4, 4, :east
+    @robot.move
+    assert_equal 4, @robot.position.x
+    assert_equal 4, @robot.position.y
+    assert_equal :east, @robot.facing
+
+    @robot.place 0, 0, :west
+    @robot.move
+    assert_equal 0, @robot.position.x
+    assert_equal 0, @robot.position.y
+    assert_equal :west, @robot.facing
+
+    @robot.place 0, 0, :south
+    @robot.move
+    assert_equal 0, @robot.position.x
+    assert_equal 0, @robot.position.y
+    assert_equal :south, @robot.facing
+
+    @robot.place 0, 0, :north
+    10.times { @robot.move }
+    assert_equal 0, @robot.position.x
+    assert_equal 4, @robot.position.y
+  end
+
 end
