@@ -1,0 +1,31 @@
+PATH
+  remote: .
+  specs:
+    toy_robot (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ansi (1.5.0)
+    builder (3.2.4)
+    minitest (5.16.3)
+    minitest-reporters (1.5.0)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
+    rake (13.0.6)
+    ruby-progressbar (1.11.0)
+
+PLATFORMS
+  arm64-darwin-21
+
+DEPENDENCIES
+  bundler (~> 2.0)
+  minitest (~> 5.0)
+  minitest-reporters
+  rake (~> 13.0)
+  toy_robot!
+
+BUNDLED WITH
+   2.3.23
