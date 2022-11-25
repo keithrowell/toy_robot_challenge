@@ -8,5 +8,6 @@ end
 require_relative "toy_robot/version"
 require "toy_robot/game_board"
 require "toy_robot/robot"
+require "toy_robot/commands"
 
 
