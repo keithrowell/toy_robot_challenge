@@ -73,8 +73,5 @@ module ToyRobot
     def valid_coordinate? x, y
       @game_board.valid? x, y
     end
-
-    def next_position
-    end
   end
 end
