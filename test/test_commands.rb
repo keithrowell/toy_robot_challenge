@@ -23,6 +23,11 @@ class TestCommands < Minitest::Test
     assert_equal "2, 3, NORTH", @commands.report
   end
 
+  def test_place_with_strings
+    @commands.place '2', '3', 'NORTH'
+    assert_equal "2, 3, NORTH", @commands.report
+  end
+
   def test_move
     @commands.place 2, 3, :north
     @commands.move
