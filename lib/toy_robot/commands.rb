@@ -1,6 +1,6 @@
 module ToyRobot
   class Commands
-    VALID_COMMAND_SET = [:place, :move, :left, :right, :report]
+    VALID_COMMAND_SET = [:place, :move, :left, :right, :report, :quit]
 
     def initialize
       @robot = Robot.new
@@ -40,6 +40,10 @@ module ToyRobot
     def report
       return unless move_allowed?
       "#{@robot.position.x}, #{@robot.position.y}, #{@robot.facing.upcase}"
+    end
+
+    def quit
+      exit
     end
 
     def move_allowed?

@@ -5,7 +5,8 @@ module ToyRobot
       move: /^MOVE$/i,
       left: /^LEFT$/i,
       right: /^RIGHT$/i,
-      report: /^REPORT$/i
+      report: /^REPORT$/i,
+      quit: /^QUIT$/i,
     }
 
     def initialize
@@ -59,6 +60,7 @@ Valid commands:
   LEFT
   RIGHT
   REPORT
+  QUIT
 Enter a PLACE command to start
       INSTRUCTIONS
     end
