@@ -51,9 +51,6 @@ module ToyRobot
       end
     end
 
-    def report
-    end
-
     def facing
       @game_board.facing
     end
