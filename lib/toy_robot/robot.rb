@@ -67,7 +67,7 @@ module ToyRobot
     end
 
     def valid_direction? direction
-      FACES.keys.include? direction
+      FACES.keys.include? direction.downcase.to_sym
     end
 
     def valid_coordinate? x, y
