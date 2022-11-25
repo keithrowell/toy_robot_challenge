@@ -14,6 +14,7 @@ module ToyRobot
     end
 
     def run
+      show_instructions
       loop do
         instruction = get_user_instruction
         command_name, *args = parse_instruction instruction
@@ -43,6 +44,23 @@ module ToyRobot
 
     def execute_command command_name, args
       @commands.send command_name.to_sym, *args
+    end
+
+    def show_instructions
+      puts instructions
+    end
+
+    def instructions
+      <<-INSTRUCTIONS
+Welcome to Toy Robot Simulator
+Valid commands:
+  PLACE X, Y, DIRECTION
+  MOVE
+  LEFT
+  RIGHT
+  REPORT
+Enter a PLACE command to start
+      INSTRUCTIONS
     end
   end
 end
