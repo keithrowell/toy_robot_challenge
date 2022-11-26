@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+
+  gem:
+    image: toy_robot_gem
+    tty: true
+    stdin_open: true
+    container_name: toy_robot
+    working_dir: /toy_robot_gem
+
+    command: /bin/bash -c "bin/toy_robot"
+
+    volumes:
+      - ./:/toy_robot_gem:cached
+      - ./.docker_volumes/bundle:/bundle:delegated
