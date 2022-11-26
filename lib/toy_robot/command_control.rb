@@ -28,14 +28,14 @@ module ToyRobot
     end
 
     def get_user_instruction
-      instruction = gets
+      instruction = gets&.chomp&.lstrip&.rstrip
     end
 
     def parse_instruction instruction
       COMMANDS_REGEXES.each do |command_name, regex|
         match = instruction.match regex
         return command_name, *match.captures if match
-      end
+      end if instruction
       return nil
     end
 
