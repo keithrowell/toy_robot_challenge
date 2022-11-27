@@ -59,9 +59,6 @@ module ToyRobot
       @game_board.position
     end
 
-    def valid_move?
-    end
-
     def valid_turn_direction? direction
       TURN_DIRECTIONS.include? direction
     end
