@@ -19,6 +19,8 @@ class TestGameBoard < Minitest::Test
   end
 
   def test_valid
+    assert @board.valid? 0, 0
+    assert @board.valid? 4, 4
     assert @board.valid? 2, 2
     refute @board.valid? 5, 5
     refute @board.valid? 3, 10
