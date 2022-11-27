@@ -6,3 +6,6 @@
 /pkg/
 /spec/reports/
 /tmp/
+
+.docker_volumes
+*.DS_Store
