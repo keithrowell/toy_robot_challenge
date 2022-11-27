@@ -20,25 +20,25 @@ module ToyRobot
     end
 
     def move
-      return unless move_allowed?
+      return unless command_allowed?
       @robot.move
       return nil
     end
 
     def left
-      return unless move_allowed?
+      return unless command_allowed?
       @robot.turn :left
       return nil
     end
 
     def right
-      return unless move_allowed?
+      return unless command_allowed?
       @robot.turn :right
       return nil
     end
 
     def report
-      return unless move_allowed?
+      return unless command_allowed?
       "#{@robot.position.x}, #{@robot.position.y}, #{@robot.facing.upcase}"
     end
 
@@ -46,7 +46,7 @@ module ToyRobot
       exit
     end
 
-    def move_allowed?
+    def command_allowed?
       @initial_placement_done
     end
   end
