@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "Toy Robot is a simulation of a toy robot moving on a square tabletop"
   spec.homepage = "https://gitlab.com/sunstonesolutions/toy-robot"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 3.1.2"
+  spec.required_ruby_version = ">= 3.1.3"
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
