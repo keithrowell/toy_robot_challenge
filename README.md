@@ -1,8 +1,10 @@
 # ToyRobot Challenge
 
- A Toy Robot coding challnge as written in realtime.
+A Toy Robot coding challnge as written in realtime.
 
-## Instructions
+Instructions for the task itself are in the [`task.md`](task.md) file.
+
+## How to Run
 
 - `docker build -t toy_robot_gem .`
 - `docker-compose up -d && docker attach toy_robot`
