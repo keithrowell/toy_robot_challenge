@@ -13,7 +13,7 @@ Instructions for the task itself are in the [`task.md`](task.md) file.
 
 <img width="562" alt="Screenshot" src="https://github.com/keithrowell/toy_robot_challenge/assets/792745/c4310ba3-c9ab-40d7-b0cf-358074285b38">
 
-## GUI
+### GUI
 
 There's also a [GUI app](https://github.com/keithrowell/toy_robot_challenge_gui) that interacts with this gem
 
